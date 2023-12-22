@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-catch */
 import conf from "../conf/conf.js";
 import { Client, Account, ID } from "appwrite";
 
@@ -21,7 +20,6 @@ export class AuthService {
             password,
             name
          );
-
          if (userAccount) {
             // call another method
             return this.login({ email, password });
@@ -45,7 +43,7 @@ export class AuthService {
       try {
          return await this.account.get();
       } catch (error) {
-         console.log("Appwrite service :: getCurrentUser :: error", error);
+         console.log("Appwrite serive :: getCurrentUser :: error", error);
       }
 
       return null;
@@ -55,7 +53,7 @@ export class AuthService {
       try {
          await this.account.deleteSessions();
       } catch (error) {
-         console.log("Appwrite service :: logout :: error", error);
+         console.log("Appwrite serive :: logout :: error", error);
       }
    }
 }
@@ -63,6 +61,5 @@ export class AuthService {
 const authService = new AuthService();
 
 export default authService;
-
 
 // this code snippet can be also used in future for authentication service if you're using Appwrite's services in a project.

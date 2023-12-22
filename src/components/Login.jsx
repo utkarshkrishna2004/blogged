@@ -25,6 +25,7 @@ function Login() {
          setError(error.message);
       }
    };
+
    return (
       <div className="flex items-center justify-center w-full">
          <div
@@ -36,10 +37,11 @@ function Login() {
                </span>
             </div>
             <h2 className="text-center text-2xl font-bold leading-tight">
-               Sign In to your account
+               Sign in to your account
             </h2>
             <p className="mt-2 text-center text-base text-black/60">
-               Don't have an account?
+               Don't have an account?&nbsp;
+
                <Link
                   to="/signup"
                   className="font-medium text-primary transition-all duration-200 hover:underline"
