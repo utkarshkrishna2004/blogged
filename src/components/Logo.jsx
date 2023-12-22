@@ -1,8 +1,9 @@
 import React from 'react'
+import logocropped from '../assets/logocropped.png'
 
-function Logo({width = '100px'}) {
+function Logo() {
   return (
-    <div>Logo</div>
+    <img src={logocropped} alt="blogged" className=' w-36' />
   )
 }
 
